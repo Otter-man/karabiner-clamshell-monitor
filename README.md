@@ -1,8 +1,18 @@
 
-### Clamshell Monitor Setup and rule for disabling external keyboards for Karabiner Elements
+## Clamshell Monitor script and rule for disabling external keyboards for Karabiner Elements
 
-This repository contains complex modification rule for Karabiner Elements, which allows you to disable external keyboards if your Macbook is opened.  
-It requires a special script, which monitors if your Macbook is closed (clamshelled) and which runs as a background process in your system.
+This repository contains complex modification rule for Karabiner Elements, which allows you to disable any external keyboard when your MacBook is opened. 
+This feature is particularly useful when you use your MacBook in clamshell mode, i.e., connected to an external display and keyboard/mouse, and wish to prevent the external keyboard from responding once the MacBook is opened, without the need to physically disconnect it.
+
+It depends on a special script, which monitors if your Macbook is closed (clamshelled) and which runs as a background process in your system.
+
+### How It Works
+
+The rule operates on a simple principle: it instructs your Mac to ignore any keystrokes from external keyboards when the internal variable `macbook_clamshell_status` in Karabiner is set to `opened`. Conversely, it disregards this rule when the variable is set to `closed`.
+
+Once you install the script, it will run in the background of your system after every startup and will monitor clamshell status of your Mac via macOS event stream.
+
+On changes detected in the stream it will change the value of the variable, which in turn activates or deactivates the rule.
 
 ## Requirements
 
@@ -10,7 +20,7 @@ It requires a special script, which monitors if your Macbook is closed (clamshel
 - MacOS Sonoma
 - [Karabiner Elements](https://karabiner-elements.pqrs.org/) installed
 
-This modifications haven't been tested with Intel MacBooks or on other versions of macOS.
+These modifications haven't been tested with Intel MacBooks or on other versions of macOS.
 
 ## Installation Options
 
