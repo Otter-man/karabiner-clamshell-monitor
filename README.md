@@ -1,5 +1,5 @@
 
-### Clamshell Monitor Setup for Karabiner Elements
+### Clamshell Monitor Setup and rule for disabling external keyboards for Karabiner Elements
 
 This repository contains complex modification rule for Karabiner Elements, which allows you to disable external keyboards if your Macbook is opened.  
 It requires a special script, which monitors if your Macbook is closed (clamshelled) and which runs as a background process in your system.
@@ -34,7 +34,7 @@ Restart you MacBook.
 Run the following command in your terminal:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Otter-man/karabiner-clamshell-monitor/main/install_clamshell_monitor_only.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Otter-man/karabiner-clamshell-monitor/main/install_clamshell_monitor.sh)"
 ```
 Restart you MacBook.
 
@@ -43,5 +43,7 @@ Restart you MacBook.
 To uninstall all components run:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Otter-man/karabiner-clamshell-monitor/main/uninstall_all_clamshell_monitor.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Otter-man/karabiner-clamshell-monitor/main/uninstall_clamshell_monitor.sh)"
 ```
+Open Karabiner Elements __Settings -> Complex Modifications__.  
+Find `Disable external keyboard input when macbook is opened` rule in the list and click on trash bin icon to remove it.
