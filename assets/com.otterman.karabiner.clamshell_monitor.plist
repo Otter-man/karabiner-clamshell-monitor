@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.otterman.karabiner.clamshell_monitor.plist</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/clamshell_monitor.sh</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/tmp/karabiner_clamshell_monitor.err</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/karabiner_clamshell_monitor.out</string>
+</dict>
+</plist>
